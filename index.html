@@ -32,6 +32,11 @@
             - font awesome?!
         - Javascript things?
         - Git stuff?
+        - VS Code shortcuts
+            - ctrl + /: comment line
+            - alt + shift + f: format whole document
+            - ctrl + d: select next occurance
+            - alt + w: wrap selection with html tag
        
     
     -->
@@ -114,10 +119,14 @@
             <p>Each link also uses a Font Awesome icon with the
                 <code>&lt;i&gt;</code> tag</p>
 
-                <h3>Link to Project Source Code</h3>
+            <h3>Link to Project Source Code</h3>
 
-                <p>View <a id="sourceURL">Source Code</a> on GitHub!</p>
-                
+            <p>View
+                <a id="sourceURL">Source Code</a> on GitHub!</p>
+            <script type="text/javascript">var sourceURL = "https://github.com/mckelveygreg" + window.location.pathname;
+                var sourceA = document.querySelector('#sourceURL');
+                sourceA.setAttribute('href', sourceURL);
+            </script>
         </section>
 
         <section class="main-section">
