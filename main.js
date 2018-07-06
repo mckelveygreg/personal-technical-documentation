@@ -1,4 +1,4 @@
-
+// Auto Navbar
 var sections = document.querySelectorAll('.main-section');
 var navbar = document.querySelector('#navbar');
 
@@ -16,3 +16,9 @@ sections.forEach(section => {
     navbar.appendChild(link);
 })
 
+// Footer source url generator
+
+var sourceURL = "https://github.com/mckelveygreg" + document.location.pathname;
+var sourceP = document.querySelector('#sourceURL');
+sourceP.setAttribute('href', sourceURL);
+                

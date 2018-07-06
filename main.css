@@ -3,3 +3,7 @@
 header {
     font-size: 2.5em;
 }
+
+pre {
+    overflow: auto;
+}

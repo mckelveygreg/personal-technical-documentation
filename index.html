@@ -7,7 +7,12 @@
     <title>Personal Technical Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/brands.css" integrity="sha384-7xAnn7Zm3QC1jFjVc1A6v/toepoG3JXboQYzbM0jrPzou9OFXm/fY6Z/XiIebl/k"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG"
+        crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -24,6 +29,7 @@
             - Favicon
             - li generator
             - HTML escaper
+            - font awesome?!
         - Javascript things?
         - Git stuff?
        
@@ -47,14 +53,13 @@
             </ol>
 
             <h3>Copyright</h3>
-            
             <pre class="prettyprint">
-&lt;code&gt;
+&lt;p&gt;
     Created by Greg McKelvey &amp;copy;
     &lt;script type=&quot;text/javascript&quot;&gt;
         document.write(new Date().getFullYear());
     &lt;/script&gt;
-&lt;/code&gt;
+&lt;/p&gt;
             </pre>
             <p>... gets rendered as...</p>
             <p>Created by Greg McKelvey &copy;
@@ -62,8 +67,57 @@
                     document.write(new Date().getFullYear());
                 </script>
             </p>
-          
+            <p>Everytime the page is loaded, the script gets date of the current year</p>
 
+            <h3>Links to my Social Media</h3>
+            <pre class="prettyprint">
+&lt;a href=&quot;https://twitter.com/Whyisbecause&quot; target=&quot;_blank&quot;&gt;
+    &lt;i class=&quot;fab fa-twitter&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href=&quot;https://www.facebook.com/whyisbecause&quot; target=&quot;_blank&quot;&gt;
+    &lt;i class=&quot;fab fa-facebook&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href=&quot;https://github.com/mckelveygreg&quot; target=&quot;_blank&quot;&gt;
+    &lt;i class=&quot;fab fa-github&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href=&quot;https://www.freecodecamp.org/mckelveygreg&quot; target=&quot;_blank&quot;&gt;
+    &lt;i class=&quot;fab fa-free-code-camp&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href=&quot;https://codepen.io/mckelveygreg/&quot; target=&quot;_blank&quot;&gt;
+    &lt;i class=&quot;fab fa-codepen&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href=&quot;https://www.linkedin.com/in/greg-mckelvey-6b0125153/&quot; target=&quot;_blank&quot;&gt;
+    &lt;i class=&quot;fab fa-linkedin&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;                    </pre>
+            <p>... get rendered as...</p>
+            <a href="https://twitter.com/Whyisbecause" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/whyisbecause" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://github.com/mckelveygreg" target="_blank">
+                <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.freecodecamp.org/mckelveygreg" target="_blank">
+                <i class="fab fa-free-code-camp"></i>
+            </a>
+            <a href="https://codepen.io/mckelveygreg/" target="_blank">
+                <i class="fab fa-codepen"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/greg-mckelvey-6b0125153/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <p>Each
+                <code>&lt;a&gt;</code> has an attribute of
+                <code>target="_blank"</code> that will open up a new tab when clicked</p>
+            <p>Each link also uses a Font Awesome icon with the
+                <code>&lt;i&gt;</code> tag</p>
+
+                <h3>Link to Project Source Code</h3>
+
+                <p id="sourceURL">View <a>Source Code</a> on GitHub!</p>
+                
         </section>
 
         <section class="main-section">
@@ -84,6 +138,8 @@
     </main>
     <script src="main.js"></script>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
+
 </body>
 
 </html>
