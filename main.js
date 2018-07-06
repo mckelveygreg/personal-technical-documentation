@@ -18,7 +18,7 @@ sections.forEach(section => {
 
 // Footer source url generator
 
-var sourceURL = "https://github.com/mckelveygreg" + document.location.pathname;
-var sourceP = document.querySelector('#sourceURL');
-sourceP.setAttribute('href', sourceURL);
+var sourceURL = "https://github.com/mckelveygreg" + window.location.pathname;
+var sourceA = document.querySelector('#sourceURL');
+sourceA.setAttribute('href', sourceURL);
                 
