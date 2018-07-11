@@ -31,6 +31,7 @@ function buildSubHeadings (el) {
         var subA = document.createElement('a');
         let sectionId = h3.textContent.replace(/\s+/g, '_');
         
+        h3.setAttribute('id', sectionId);
         subA.innerText = h3.textContent;
         subA.setAttribute('href', '#' + sectionId);
         subLi.appendChild(subA);

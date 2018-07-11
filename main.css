@@ -10,10 +10,9 @@ body {
 
 #main-doc {
     display: grid;
-    grid-template-rows: auto 3em;
+    grid-template-rows: 1fr 3em;
     grid-template-columns: 12em 1fr;
     grid-template-areas: "nav main"
-                        " .   main"
                         "foot foot";
     height: 100vh;
     margin: 0 auto;
@@ -44,7 +43,6 @@ body {
 
 #navbar > a {
     border-top: solid #888;
-    margin: 
 }
 
 #navbar ul {
@@ -63,13 +61,12 @@ body {
 
 
 .main-display {
-    grid-row-start: 1;
-    grid-column-start: 2;
     grid-area: main;
     padding: 10px;
     margin-bottom: 25px;
     background: linear-gradient(to right, #e7ecf3, white);
     margin-bottom: 3em;
+    width: 80%;
 }
 
 footer {
@@ -90,6 +87,7 @@ header {
 
 pre {
     overflow: auto;
+    width: 100%;
 }
 
 @media screen and (max-width: 630px) {
