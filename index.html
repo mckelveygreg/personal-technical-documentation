@@ -21,6 +21,7 @@
         <!--List of stuff i need to remember how to do:
         - Centering stuff 
         - Sticky Nav bars
+        - CSS Grid
         - My footer settings
             - Link to source code
             - Copyright
@@ -46,108 +47,183 @@
 
         </nav>
 
-        <section class="main-section">
-            <header>Footer For All of My Projects</header>
-            <p>Each project I do needs the same footer. So instead of having to reinvent the wheel, I can use this resource
-                to always have access to consistent footer content.</p>
-            <p>Each footer consists of three parts:</p>
-            <ol>
-                <li>Copyright</li>
-                <li>Link to my Social Media</li>
-                <li>Link to the project source code</li>
-            </ol>
+        <div class="main-display">
+            <section class="main-section">
+                <header>Footer For All of My Projects</header>
+                <p>Each project I do needs the same footer. So instead of having to reinvent the wheel, I can use this resource
+                    to always have access to consistent footer content.</p>
+                <p>Each footer consists of three parts:</p>
+                <ol>
+                    <li>Copyright</li>
+                    <li>Link to my Social Media</li>
+                    <li>Link to the project source code</li>
+                </ol>
 
-            <h3>Copyright</h3>
-            <pre class="prettyprint">
-&lt;p&gt;
-    Created by Greg McKelvey &amp;copy;
-    &lt;script type=&quot;text/javascript&quot;&gt;
-        document.write(new Date().getFullYear());
+                <h3>Copyright</h3>
+                <pre class="prettyprint">
+    &lt;p&gt;
+        Created by Greg McKelvey &amp;copy;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+            document.write(new Date().getFullYear());
+        &lt;/script&gt;
+    &lt;/p&gt;
+                </pre>
+                <p>... gets rendered as...</p>
+                <p>Created by Greg McKelvey &copy;
+                    <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                    </script>
+                </p>
+                <p>Everytime the page is loaded, the script gets date of the current year</p>
+
+                <h3>Links to my Social Media</h3>
+                <pre class="prettyprint">
+    &lt;a href=&quot;https://twitter.com/Whyisbecause&quot; target=&quot;_blank&quot;&gt;
+        &lt;i class=&quot;fab fa-twitter&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;https://www.facebook.com/whyisbecause&quot; target=&quot;_blank&quot;&gt;
+        &lt;i class=&quot;fab fa-facebook&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;https://github.com/mckelveygreg&quot; target=&quot;_blank&quot;&gt;
+        &lt;i class=&quot;fab fa-github&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;https://www.freecodecamp.org/mckelveygreg&quot; target=&quot;_blank&quot;&gt;
+        &lt;i class=&quot;fab fa-free-code-camp&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;https://codepen.io/mckelveygreg/&quot; target=&quot;_blank&quot;&gt;
+        &lt;i class=&quot;fab fa-codepen&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;https://www.linkedin.com/in/greg-mckelvey-6b0125153/&quot; target=&quot;_blank&quot;&gt;
+        &lt;i class=&quot;fab fa-linkedin&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;                    </pre>
+                <p>... get rendered as...</p>
+                <a href="https://twitter.com/Whyisbecause" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/whyisbecause" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://github.com/mckelveygreg" target="_blank">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.freecodecamp.org/mckelveygreg" target="_blank">
+                    <i class="fab fa-free-code-camp"></i>
+                </a>
+                <a href="https://codepen.io/mckelveygreg/" target="_blank">
+                    <i class="fab fa-codepen"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/greg-mckelvey-6b0125153/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <p>Each
+                    <code>&lt;a&gt;</code> has an attribute of
+                    <code>target="_blank"</code> that will open up a new tab when clicked</p>
+                <p>Each link also uses a Font Awesome icon with the
+                    <code>&lt;i&gt;</code> tag</p>
+
+                <h3>Link to Project Source Code</h3>
+                <pre class="prettyprint">
+    &lt;p&gt;View
+        &lt;a id=&quot;sourceURL&quot;&gt;Source Code&lt;/a&gt; on GitHub!&lt;/p&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;var sourceURL = &quot;https://github.com/mckelveygreg&quot; + window.location.pathname;
+        var sourceA = document.querySelector('#sourceURL');
+        sourceA.setAttribute('href', sourceURL);
     &lt;/script&gt;
-&lt;/p&gt;
-            </pre>
-            <p>... gets rendered as...</p>
-            <p>Created by Greg McKelvey &copy;
-                <script type="text/javascript">
-                    document.write(new Date().getFullYear());
+                </pre>
+                <p>... gets rendered as...</p>
+                <p>View
+                    <a id="sourceURL">Source Code</a> on GitHub!</p>
+                <script type="text/javascript">var sourceURL = "https://github.com/mckelveygreg" + window.location.pathname;
+                    var sourceA = document.querySelector('#sourceURL');
+                    sourceA.setAttribute('href', sourceURL);
                 </script>
-            </p>
-            <p>Everytime the page is loaded, the script gets date of the current year</p>
+            </section>
 
-            <h3>Links to my Social Media</h3>
-            <pre class="prettyprint">
-&lt;a href=&quot;https://twitter.com/Whyisbecause&quot; target=&quot;_blank&quot;&gt;
-    &lt;i class=&quot;fab fa-twitter&quot;&gt;&lt;/i&gt;
-&lt;/a&gt;
-&lt;a href=&quot;https://www.facebook.com/whyisbecause&quot; target=&quot;_blank&quot;&gt;
-    &lt;i class=&quot;fab fa-facebook&quot;&gt;&lt;/i&gt;
-&lt;/a&gt;
-&lt;a href=&quot;https://github.com/mckelveygreg&quot; target=&quot;_blank&quot;&gt;
-    &lt;i class=&quot;fab fa-github&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-&lt;/a&gt;
-&lt;a href=&quot;https://www.freecodecamp.org/mckelveygreg&quot; target=&quot;_blank&quot;&gt;
-    &lt;i class=&quot;fab fa-free-code-camp&quot;&gt;&lt;/i&gt;
-&lt;/a&gt;
-&lt;a href=&quot;https://codepen.io/mckelveygreg/&quot; target=&quot;_blank&quot;&gt;
-    &lt;i class=&quot;fab fa-codepen&quot;&gt;&lt;/i&gt;
-&lt;/a&gt;
-&lt;a href=&quot;https://www.linkedin.com/in/greg-mckelvey-6b0125153/&quot; target=&quot;_blank&quot;&gt;
-    &lt;i class=&quot;fab fa-linkedin&quot;&gt;&lt;/i&gt;
-&lt;/a&gt;                    </pre>
-            <p>... get rendered as...</p>
-            <a href="https://twitter.com/Whyisbecause" target="_blank">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.facebook.com/whyisbecause" target="_blank">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://github.com/mckelveygreg" target="_blank">
-                <i class="fab fa-github" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.freecodecamp.org/mckelveygreg" target="_blank">
-                <i class="fab fa-free-code-camp"></i>
-            </a>
-            <a href="https://codepen.io/mckelveygreg/" target="_blank">
-                <i class="fab fa-codepen"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/greg-mckelvey-6b0125153/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <p>Each
-                <code>&lt;a&gt;</code> has an attribute of
-                <code>target="_blank"</code> that will open up a new tab when clicked</p>
-            <p>Each link also uses a Font Awesome icon with the
-                <code>&lt;i&gt;</code> tag</p>
+            <section class="main-section">
+                <header>Tools I've Found Helpful</header>
+                <h3>Favicon Generator</h3>
+                <p>Here is a list of a few favicon generators I have found useful:</p>
+                <ul>
+                    <li><a href="http://www.genfavicon.com/">http://www.genfavicon.com/</a></li>
+                    <li><a href="http://www.favicon-generator.org/">http://www.favicon-generator.org/</a></li>
+                    <li><a href="http://realfavicongenerator.net/">http://realfavicongenerator.net/</a></li>
+                </ul>
+                
+                <h3>&lt;li&gt; Generator</h3>
+                <p>For my freeCodeCamp <a href="https://mckelveygreg.github.io/product-landing-page/">Product Landing Page</a> project, I needed to insert a large list of bullet pointed features. Not wanting to type tons of <code>&lt;li&gt;</code> tags, I found this handy generator:</p>
+                <a href="http://www.limaker.com/">http://www.limaker.com/</a>
 
-            <h3>Link to Project Source Code</h3>
+                <h3>HTML Escape Generator</h3>
+                <p>For this technical documentation page, I needed a way to paste raw HTML code without needing to manually replace tags with escape characters.</p>
+                <a href="https://www.freeformatter.com/html-escape.html">https://www.freeformatter.com/html-escape.html</a>
+                
+                <h3>Font Awesome</h3>
+                <p><a href="https://fontawesome.com/">Font Awesome</a> has been a wonderful tool for providing all of the icons in my footer. I have started to just use the CDN version, as it is easier to implement quickly on each page.</p>
+            </section>
 
-            <p>View
-                <a id="sourceURL">Source Code</a> on GitHub!</p>
-            <script type="text/javascript">var sourceURL = "https://github.com/mckelveygreg" + window.location.pathname;
-                var sourceA = document.querySelector('#sourceURL');
-                sourceA.setAttribute('href', sourceURL);
-            </script>
-        </section>
 
-        <section class="main-section">
-            <header>Things Lacey Taught Me</header>
-        </section>
+            <!-- - VS Code shortcuts
+            - ctrl + /: comment line or block
+            - alt + shift + f: format whole document
+            - ctrl + d: select next occurance
+            - alt + w: wrap selection with html tag -->
+            <section class="main-section">
+                <header>VS Code Shortcuts</header>
+                <p>VS Code has been my main text editor. Here is a list of shortcuts that have been handy enough to write down:</p>
+            </section>
 
-        <section class="main-section">
-            <header></header>
-        </section>
+            <section class="main-section">
+                <header></header>
+            </section>
 
-        <section class="main-section">
-            <header></header>
-        </section>
+            <section class="main-section">
+                <header></header>
+            </section>
+        </div>
+        <footer>
+            <div id="copyright">
+                <p>Created by Greg McKelvey &copy;
+                    <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                    </script>
+                </p>
+            </div>
 
-        <section class="main-section">
-            <header></header>
-        </section>
+            <div id="socMeds">
+                <a href="https://twitter.com/Whyisbecause" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/whyisbecause" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://github.com/mckelveygreg" target="_blank">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.freecodecamp.org/mckelveygreg" target="_blank">
+                    <i class="fab fa-free-code-camp"></i>
+                </a>
+                <a href="https://codepen.io/mckelveygreg/" target="_blank">
+                    <i class="fab fa-codepen"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/greg-mckelvey-6b0125153/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+            <div id="viewSource">
+                <p>View
+                    <a id="sourceURL">Source Code</a> on GitHub!</p>
+                <script type="text/javascript">var sourceURL = "https://github.com/mckelveygreg" + window.location.pathname;
+                    var sourceA = document.querySelector('#sourceURL');
+                    sourceA.setAttribute('href', sourceURL);
+                </script>
+            </div>
+
+        </footer>
     </main>
     <script src="main.js"></script>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-    <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 </body>
 
