@@ -19,9 +19,9 @@
     <main id="main-doc">
 
         <!--List of stuff i need to remember how to do:
-        - Centering stuff 
-        - Sticky Nav bars
-        - CSS Grid
+        - CSS Battles
+            - Centering stuff 
+            - Sticky Nav bars
         - My footer settings
             - Link to source code
             - Copyright
@@ -175,17 +175,63 @@
                     <li>alt + shift + f: format whole document</li>
                     <li>ctrl + d: select next occurance</li>
                     <li>alt + w: wrap selection with html tag. Uses the extension <a href="https://github.com/bgashler1/vscode-htmltagwrap">htmltagwrap</a></li>
-                    
+
                 </ul>
             
             </section>
 
             <section class="main-section">
-                <header></header>
+                <header>CSS Battles</header>
+                <p>CSS has given me its fair share of grief, so here is a reference to solutions I don't want to battle again...</p>
+                
+                <h3>Centering Stuff</h3>
+                
+                <h4>Centering elements horizontally</h4>
+                <pre class="prettyprint">
+.center-div {
+    margin: 0 auto; 
+}
+                </pre>
+                <p>This will set the top and bottom margins to 0 and split the difference on the left and right margins</p>
+
+                <h4>Centering text horizontally</h4>
+                <pre class="prettyprint">
+.center-text {
+    text-align: center;
+}
+                </pre>
+                <p>This one is thankfully more intuitive, but will propagate itself throughout the containers children... for better or for worse</p>
+
+                <h4>Centering a group of elements</h4>
+                <pre class="prettyprint">
+.container-of-elements {
+    display: flex;
+    justify-content: center;
+}
+                </pre>
+                <p>I have found it helpful to start with this code and then dive into your browser dev tools to explore all the different options like : space-around, space-between, etc.</p>
+
+
+                <h3>Sticky Navbars</h3>
+                <p>I have 2 approaches to sticky navbar</p>
+                
+                <h4>position: sticky</h4>
+                <p>This seemed to work on horizontal navbars, with <code>top= 0px</code></p>
+
+                <h4>position: fixed</h4>
+                <p>I had trouble inside of <code>grid</code> layouts and resorted to using <code>position: fixed</code>. In order for it to flow well, I had to coordinate grid sizes so there wasn't any overlap.</p>
+
             </section>
 
             <section class="main-section">
-                <header></header>
+                <header>Resources</header>
+                <p>Here is a list of resources that have been helpful so far on my journey</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">MDN Learn Web Development</a></li>
+                    <li><a href="https://www.freecodecamp.org/">Free Code Camp</a></li>
+                    <li><a href="https://www.kirupa.com/">Kirupa.com</a> Great for React tutorials</li>
+                    <li><a href="https://scrimba.com/">Scrimba</a>: Great for CSS everything!</li>
+                </ul>
             </section>
         </div>
         <footer>

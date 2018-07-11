@@ -2,12 +2,22 @@
 
     box-sizing: border-box;
 }
+body {
+    margin: 0;
+}
+
+
 
 #main-doc {
     display: grid;
     grid-template-rows: auto 3em;
     grid-template-columns: 12em 1fr;
+    grid-template-areas: "nav main"
+                        " .   main"
+                        "foot foot";
     height: 100vh;
+    margin: 0 auto;
+    font-family: sans-serif;
     max-width: 900px;
 }
 
@@ -18,18 +28,39 @@
     width: 12em;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    overflow: scroll;
+    background-color: #e7ecf3;
+    color: #1d1e1f;
+    padding: 5px;
 }
 
 #navbar a {
     text-decoration: none;
     color: #585c5e;
     padding: 5px;
+    font-weight: bold;
+}
+
+#navbar > a {
     border-top: solid #888;
+    margin: 
+}
+
+#navbar ul {
+    margin: 4px;
+}
+
+#navbar li {
+    margin: 4px;
 }
 
 #navbar a:hover {
     background-color: #888;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #888;
 }
+
 
 .main-display {
     grid-row-start: 1;
@@ -37,6 +68,8 @@
     grid-area: main;
     padding: 10px;
     margin-bottom: 25px;
+    background: linear-gradient(to right, #e7ecf3, white);
+    margin-bottom: 3em;
 }
 
 footer {
@@ -48,6 +81,7 @@ footer {
     align-items: center;
     width: 100%;
     background-color: #888;
+    padding: 5px;
 }
 
 header {
@@ -56,4 +90,23 @@ header {
 
 pre {
     overflow: auto;
+}
+
+@media screen and (max-width: 630px) {
+    #main-doc {
+        display: block;
+        height: auto;
+    }
+
+    #navbar, footer {
+        position: relative;
+    }
+
+    .main-display, #navbar {
+        width: 100%;
+    }
+
+    .main-display {
+        background: linear-gradient(#e7ecf3, white);
+    }
 }
